@@ -1,0 +1,20 @@
+To fulfill the user story and acceptance criteria, you can create a custom object in Salesforce called "Withdrawal" with the following details:
+
+1. Name: Withdrawal__c
+2. Fields:
+   - Amount__c (Currency, Required)
+   - Account__c (Lookup to Account object, Required)
+   - Timestamp__c (DateTime, Auto-populated)
+   - Status__c (Picklist: Pending/Successful/Failed, Auto-populated)
+   - Error_Message__c (Text)
+
+3. Page Layout: 
+   - Create a custom page layout for the Withdrawal object that includes the fields mentioned above. Add related lists for the Account and Transaction History objects.
+
+4. List View: 
+   - Create a list view for the Withdrawal object that includes columns for the Amount, Account, Timestamp, and Status fields.
+
+5. Tab: 
+   - Create a tab for the Withdrawal object so that users can easily access it from the Salesforce app or web interface.
+
+By implementing the above, users will be able to initiate a withdrawal by specifying the amount and account, and the system will validate the withdrawal amount, deduct it from the account balance, record the transaction details, and display error messages if necessary.
